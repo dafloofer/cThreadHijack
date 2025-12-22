@@ -1,0 +1,32 @@
+{
+    "name": "cthreadhijack",
+    "version": "0.0.0",
+    "command_name": "cthreadhijack",
+    "extension_author": "@dafloofer",
+    "original_author": "@connormcgarr",
+    "repo_url": "https://github.com/dafloofer/cthreadhijack",
+    "help": "A Beacon Object File that performs remote process injection via thread hijacking.",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "cthreadhijack.o"
+        }
+    ],
+    "arguments": [
+        {
+            "name": "pid",
+            "desc": "PID of target process for injection.",
+            "type": "int",
+            "optional": false
+        },
+        {
+            "name": "shellcode",
+            "desc": "Shellcode to be injected.",
+            "type": "file",
+            "optional": false
+        }
+    ]
+}
